@@ -1,0 +1,64 @@
+.pace {
+  height: 100px;
+  width: 100px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  margin-left: -50px;
+  margin-top: -50px;
+  z-index: 100;
+  pointer-events: none;
+  -webkit-clip-path: polygon(37% 25%, 50% 15%, 63% 25%, 75% 75%, 50% 90%, 25% 75%);
+  -ms-clip-path: polygon(37% 25%, 50% 15%, 63% 25%, 75% 75%, 50% 90%, 25% 75%);
+  clip-path: polygon(37% 25%, 50% 15%, 63% 25%, 75% 75%, 50% 90%, 25% 75%);
+  clip-path: url(../css/clip-gem.svg#svgClip);
+  /*transform*/
+  -webkit-transform: translateZ(0);
+  -moz-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  -o-transform: translateZ(0);
+  transform: translateZ(0);
+  -webkit-transition: all 500ms;
+  -moz-transition: all 500ms;
+  -ms-transition: all 500ms;
+  -o-transition: all 500ms;
+  transition: all 500ms;
+  -webkit-transition-property: -webkit-clip-path, background-color;
+  -webkit-transition-duration: 0.5s;
+  -webkit-transition-delay: 0s, 1.0s; }
+
+.pace-progress {
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  height: 100%;
+  -webkit-transition: opacity 500ms, width 500ms;
+  -moz-transition: opacity 500ms, width 500ms;
+  -ms-transition: opacity 500ms, width 500ms;
+  -o-transition: opacity 500ms, width 500ms;
+  transition: opacity 500ms, width 500ms;
+  opacity: 1;
+  background-color: #cccccc;
+  -webkit-transition-delay: 2.0s 0s; }
+
+.pace-inactive {
+  -webkit-clip-path: polygon(37% 25%, 50% 15%, 63% 25%, 75% 75%, 50% 90%, 25% 75%);
+  -ms-clip-path: polygon(37% 25%, 50% 15%, 63% 25%, 75% 75%, 50% 90%, 25% 75%);
+  clip-path: polygon(37% 25%, 50% 15%, 63% 25%, 75% 75%, 50% 90%, 25% 75%);
+  clip-path: url(../css/clip-gem.svg#svgClip); }
+  .pace-inactive .pace-progress {
+    opacity: 0; }
+
+body.intro #rut, body.pace-running #rut {
+  height: 100%; }
+  body.intro #rut #titlehex img, body.intro #rut #titlehex p, body.pace-running #rut #titlehex img, body.pace-running #rut #titlehex p {
+    opacity: 0; }
+  body.intro #rut hr, body.pace-running #rut hr {
+    width: 0; }
+  body.intro #rut #barnav, body.pace-running #rut #barnav {
+    opacity: 0;
+    bottom: -120px;
+    zoom: 110%; }
+body.intro:before, body.pace-running:before {
+  background-color: #141414; }
