@@ -1,7 +1,3 @@
-$time-slow: 2000ms;
-$time-fast: 500ms;
-
-$dim-progress:100px;
 @mixin transitions($time){
 -webkit-transition: all $time;
    -moz-transition: all $time;
@@ -24,7 +20,7 @@ $dim-progress:100px;
 	-webkit-clip-path:polygon(50% 25%, 50% 25%, 50% 25%, 75% 75%, 50% 75%, 25% 75%);
 	-ms-clip-path:polygon(50% 25%, 50% 25%, 50% 25%, 75% 75%, 50% 75%, 25% 75%);
 	clip-path:polygon(50% 25%, 50% 25%, 50% 25%, 75% 75%, 50% 75%, 25% 75%);
-	clip-path: url(../css/clip-tri.svg#svgClip);
+	clip-path: url(../svg/clip-tri.svg#svgClip);
 }
 
 @mixin clip-gem(){
@@ -32,7 +28,7 @@ $dim-progress:100px;
 	-webkit-clip-path:polygon(37% 25%, 50% 15%, 63% 25%, 75% 75%, 50% 90%, 25% 75%);
 		-ms-clip-path:polygon(37% 25%, 50% 15%, 63% 25%, 75% 75%, 50% 90%, 25% 75%);
 		    clip-path:polygon(37% 25%, 50% 15%, 63% 25%, 75% 75%, 50% 90%, 25% 75%);
-	clip-path: url(../css/clip-gem.svg#svgClip);
+	clip-path: url(../svg/clip-gem.svg#svgClip);
 }
 
 @mixin clip-tri-inverted(){
@@ -40,14 +36,14 @@ $dim-progress:100px;
 	-webkit-clip-path:polygon(50% 75%, 50% 75%, 50% 75%, 75% 25%, 50% 25%, 25% 25%);
 	-ms-clip-path:polygon(50% 75%, 50% 75%, 50% 75%, 75% 25%, 50% 25%, 25% 25%);
 	clip-path:polygon(50% 75%, 50% 75%, 50% 75%, 75% 25%, 50% 25%, 25% 25%);
-	clip-path: url(../css/clip-tri-inverted.svg#svgClip);
+	clip-path: url(../svg/clip-tri-inverted.svg#svgClip);
 }
 
 @mixin clip-gem-inverted(){
 	-webkit-clip-path:polygon(37% 75%, 50% 85%, 63% 75%, 75% 25%, 50% 10%, 25% 25%);
 		-ms-clip-path:polygon(37% 75%, 50% 85%, 63% 75%, 75% 25%, 50% 10%, 25% 25%);
 			clip-path:polygon(37% 75%, 50% 85%, 63% 75%, 75% 25%, 50% 10%, 25% 25%);
-	clip-path: url(../css/clip-gem-inverted.svg#svgClip);
+	clip-path: url(../svg/clip-gem-inverted.svg#svgClip);
 }
 
 @mixin clip-tri-unchanging(){
@@ -56,7 +52,7 @@ $dim-progress:100px;
 	-ms-clip-path:polygon(0% 6.69872981%, 100% 6.69872981%, 50% 93.301270%);
 	clip-path:polygon(0% 6.69872981%, 100% 6.69872981%, 50% 93.301270);
 
-	clip-path: url(../css/clip-tri-full.svg#svgClip);
+	clip-path: url(../svg/clip-tri-full.svg#svgClip);
 }
 
 @mixin clip-tri-unchanging-inverted(){
@@ -64,90 +60,30 @@ $dim-progress:100px;
 	-webkit-clip-path:polygon(0% 6.69872981%, 100% 6.69872981%, 50% 93.301270189%);
 	-ms-clip-path:polygon(0% 6.69872981%, 100% 6.69872981%, 50% 93.301270%);
 	clip-path:polygon(0% 6.69872981%, 100% 6.69872981%, 50% 93.301270);
-	clip-path: url(../css/clip-tri-full-inverted.svg#svgClip);
+	clip-path: url(../svg/clip-tri-full-inverted.svg#svgClip);
 }
 
-$light: #CCCCCC;
-$dark: #222222;
-
-.pace{
-	height:$dim-progress;
-	width:$dim-progress;
-	position:fixed;
-	top:50%;
-	left:50%;
-	margin-left: - $dim-progress/2;
-	margin-top: - $dim-progress/2;
-	z-index:100;
-
-	pointer-events:none;	
-	@include clip-gem();
-	@include transitions-layer;
-	@include transitions($time-fast);
-
-
-	-webkit-transition-property: -webkit-clip-path, background-color;
-	-webkit-transition-duration: 0.5s;
-	-webkit-transition-delay: 0s, 1.0s;
+@mixin columns($n){
+		-webkit-column-count: $n; /* Chrome, Safari, Opera */
+		-moz-column-count: $n; /* Firefox */
+		column-count: $n;
+		
 }
 
-.pace-progress{
+$color-transwhite: rgba(255, 255, 255, 0.2);
 
-	position:absolute;
-	left:0;
-	top:0;
-	right:0;
+$time-fast: 500ms;
+$time-slow: 2000ms;
 
-	height:100%;
+$textcolor: rgba(255,255,255,0.85);
 
 
-	$time: $time-fast;
-	-webkit-transition: opacity $time, width $time;
-	   -moz-transition: opacity $time, width $time;
-	    -ms-transition: opacity $time, width $time;
-	     -o-transition: opacity $time, width $time;
-	        transition: opacity $time, width $time;
+$masklayer: 1;
+$contentlayer: 3;
+$loadlayer: 100;
 
 
-	opacity:1;
-
-	background-color: $light;
-
-	-webkit-transition-delay: 2.0s 0s;
+$smallestwidth: 320px;
 
 
-}
-
-.pace-inactive{
-	@include clip-gem();
-
-	.pace-progress{
-		opacity:0;
-	}
-}
-
-body.intro, body.pace-running{
-
-	#rut{
-		height:100%;
-
-		#titlehex{
-			img, p{
-				opacity:0;
-			}
-		}
-
-		hr{
-			width:0;
-		}
-
-		#barnav{
-			opacity:0;
-			bottom: -120px;
-			zoom:110%;		}
-	}
-
-	&:before{
-		background-color:rgba(20,20,20,1);
-	}
-}
+$barnav-height:120px;

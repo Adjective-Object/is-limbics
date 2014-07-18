@@ -4,7 +4,7 @@
 		<meta charset="UTF-8">
 
 		<!-- TODO how do I pace.js -->
-		<link rel="stylesheet" type="text/css" href="./pace/custom.css">
+		<link rel="stylesheet" type="text/css" href="./css/pace-custom.css">
 		<script type="text/javascript">
 			paceOptions = {  
 				restartOnPushState: false,  
@@ -17,7 +17,7 @@
 
 		<title>IS_LIMBICS</title>
 	</head>
-	<body class="intro rut">
+	<body class="intro">
 		<section id="folds">
 		<section id="rut" class="fold">
 			<section class="content">
@@ -191,11 +191,9 @@
 	</body>
 
 	<script type="text/javascript" src="jquery-2.0.3.min.js"></script>
-	<script type="text/javascript" src="smooth-scroll.js"></script>
 	<script type="text/javascript">
 
 	$(document).ready(function(){
-		smoothScroll.init();
 
 		$(".intro").each( function(index, item){
 			$(item).removeClass("intro");
@@ -205,33 +203,29 @@
 
 	});
 
-	var elems = $(".fold");
-	var ids = {
-		0:"rut",
-		1:"nws",
-		2:"abt",
-		3:"tou",
-		4:"mus"
-	}
-
 	function bodyclasses(){
-
-		var lowest = 0
-		var lowestind = 0;
-		for(var i=0; i<elems.length; i++){
-			$("body").removeClass(ids[i]);
-			if ($(window).scrollTop() + $(window).height()/2 > $(elems[i]).offset().top){
-				if(lowest < $(elems[i]).offset().top) {
-					lowest = $(elems[i]).offset().top;
-					lowestind = i;
-				}
-			}
+		if ($(window).scrollTop() + $(window).height()/2 > $(".fold:nth-child(2)").offset().top){
+			//console.log(lowestind);
+			$("body").addClass("pastrut");
 		}
-		//console.log(lowestind);
-		$("body").addClass(ids[lowestind]);
 	}
 
 	$(window).scroll(bodyclasses);
+	bodyclasses();
+
+	$("a").click(function(evt){
+		if(this.pathname == window.location.pathname){
+			evt.preventDefault();
+			if( this.hash != ""){
+				x = this.hash;
+				$('html, body').animate({
+					scrollTop: $(x).offset().top
+				}, 1000, "swing", function(){
+					window.location.hash = (x =="#rut")? "" : x;
+				});
+			}
+		}
+	})
 
 	</script>
 </html>

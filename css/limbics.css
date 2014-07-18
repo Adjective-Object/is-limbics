@@ -64,13 +64,13 @@ svg {
   -webkit-clip-path: polygon(50% 25%, 50% 25%, 50% 25%, 75% 75%, 50% 75%, 25% 75%);
   -ms-clip-path: polygon(50% 25%, 50% 25%, 50% 25%, 75% 75%, 50% 75%, 25% 75%);
   clip-path: polygon(50% 25%, 50% 25%, 50% 25%, 75% 75%, 50% 75%, 25% 75%);
-  clip-path: url(./clip-tri.svg#svgClip); }
+  clip-path: url(../svg/clip-tri.svg#svgClip); }
 
 .shifter:hover, .gem {
   -webkit-clip-path: polygon(37% 25%, 50% 15%, 63% 25%, 75% 75%, 50% 90%, 25% 75%);
   -ms-clip-path: polygon(37% 25%, 50% 15%, 63% 25%, 75% 75%, 50% 90%, 25% 75%);
   clip-path: polygon(37% 25%, 50% 15%, 63% 25%, 75% 75%, 50% 90%, 25% 75%);
-  clip-path: url(./clip-gem.svg#svgClip); }
+  clip-path: url(../svg/clip-gem.svg#svgClip); }
   .shifter:hover p, .gem p {
     top: 60%; }
 
@@ -129,15 +129,15 @@ body.mus:before{
     z-index: 3;
     position: relative; }
   .fold:nth-child(1) {
-    background-image: url("./hipsters_1.jpg"); }
+    background-image: url("../img/hipsters_1.jpg"); }
   .fold:nth-child(2) {
-    background-image: url("./hipsters_2.jpg"); }
+    background-image: url("../img/hipsters_2.jpg"); }
   .fold:nth-child(3) {
-    background-image: url("./hipsters_3.jpg"); }
+    background-image: url("../img/hipsters_3.jpg"); }
   .fold:nth-child(4) {
-    background-image: url("./hipsters_4.jpg"); }
+    background-image: url("../img/hipsters_4.jpg"); }
   .fold:nth-child(5) {
-    background-image: url("./hipsters_5.jpg"); }
+    background-image: url("../img/hipsters_5.jpg"); }
 
 #rut {
   height: 100%; }
@@ -253,7 +253,7 @@ hr.triplecross, hr.triplecross:before, hr.triplecross:after {
     top: -8px;
     vertical-align: middle; }
 
-body:not(.rut) #barnav {
+body.pastrut #barnav {
   background-color: rgba(0, 0, 0, 0.6);
   bottom: -20px; }
 
@@ -289,7 +289,7 @@ p, li {
   -webkit-clip-path: polygon(0% 6.69873%, 100% 6.69873%, 50% 93.30127%);
   -ms-clip-path: polygon(0% 6.69873%, 100% 6.69873%, 50% 93.30127%);
   clip-path: polygon(0% 6.69873%, 100% 6.69873%, 50% 93.30127);
-  clip-path: url(./clip-tri-full-inverted.svg#svgClip);
+  clip-path: url(../svg/clip-tri-full-inverted.svg#svgClip);
   width: 420px;
   height: 420px; }
 #nws h2 {
@@ -306,7 +306,7 @@ p, li {
   -webkit-clip-path: polygon(0% 93.30127%, 100% 93.30127%, 50% 6.69873%);
   -ms-clip-path: polygon(0% 6.69873%, 100% 6.69873%, 50% 93.30127%);
   clip-path: polygon(0% 6.69873%, 100% 6.69873%, 50% 93.30127);
-  clip-path: url(./clip-tri-full.svg#svgClip); }
+  clip-path: url(../svg/clip-tri-full.svg#svgClip); }
 #abt p {
   padding-bottom: 0; }
 
@@ -320,7 +320,7 @@ p, li {
   -webkit-clip-path: polygon(0% 6.69873%, 100% 6.69873%, 50% 93.30127%);
   -ms-clip-path: polygon(0% 6.69873%, 100% 6.69873%, 50% 93.30127%);
   clip-path: polygon(0% 6.69873%, 100% 6.69873%, 50% 93.30127);
-  clip-path: url(./clip-tri-full-inverted.svg#svgClip);
+  clip-path: url(../svg/clip-tri-full-inverted.svg#svgClip);
   opacity: 0.2;
   pointer-events: none;
   z-index: 2; }
@@ -385,21 +385,6 @@ p, li {
     opacity: 1; }
   #mus a:hover h2 {
     color: rgba(255, 255, 255, 0.85); }
-
-body.intro #rut, body.pace-running #rut {
-  height: 100%; }
-  body.intro #rut #titlehex img, body.intro #rut #titlehex p, body.pace-running #rut #titlehex img, body.pace-running #rut #titlehex p {
-    opacity: 0; }
-  body.intro #rut hr, body.pace-running #rut hr {
-    width: 0; }
-  body.intro #rut #barnav, body.pace-running #rut #barnav {
-    opacity: 0;
-    bottom: -120px;
-    zoom: 110%; }
-body.intro:before, body.pace-running:before {
-  background-color: #141414; }
-body.intro .fold, body.pace-running .fold {
-  height: 0; }
 
 @media screen and (max-width: 540px) {
   #titlehex {

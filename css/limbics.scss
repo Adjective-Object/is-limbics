@@ -1,81 +1,4 @@
-@mixin transitions($time){
--webkit-transition: all $time;
-   -moz-transition: all $time;
-	-ms-transition: all $time;
-	 -o-transition: all $time;
-		transition: all $time;
-}
-
-@mixin transitions-layer(){
-/*transform*/
--webkit-transform:translateZ(0);
-   -moz-transform:translateZ(0);
-	-ms-transform:translateZ(0);
-	 -o-transform:translateZ(0);
-		transform:translateZ(0);
-}
-
-@mixin clip-tri(){
-
-	-webkit-clip-path:polygon(50% 25%, 50% 25%, 50% 25%, 75% 75%, 50% 75%, 25% 75%);
-	-ms-clip-path:polygon(50% 25%, 50% 25%, 50% 25%, 75% 75%, 50% 75%, 25% 75%);
-	clip-path:polygon(50% 25%, 50% 25%, 50% 25%, 75% 75%, 50% 75%, 25% 75%);
-	clip-path: url(./clip-tri.svg#svgClip);
-}
-
-@mixin clip-gem(){
-
-	-webkit-clip-path:polygon(37% 25%, 50% 15%, 63% 25%, 75% 75%, 50% 90%, 25% 75%);
-		-ms-clip-path:polygon(37% 25%, 50% 15%, 63% 25%, 75% 75%, 50% 90%, 25% 75%);
-		    clip-path:polygon(37% 25%, 50% 15%, 63% 25%, 75% 75%, 50% 90%, 25% 75%);
-	clip-path: url(./clip-gem.svg#svgClip);
-}
-
-@mixin clip-tri-inverted(){
-
-	-webkit-clip-path:polygon(50% 75%, 50% 75%, 50% 75%, 75% 25%, 50% 25%, 25% 25%);
-	-ms-clip-path:polygon(50% 75%, 50% 75%, 50% 75%, 75% 25%, 50% 25%, 25% 25%);
-	clip-path:polygon(50% 75%, 50% 75%, 50% 75%, 75% 25%, 50% 25%, 25% 25%);
-	clip-path: url(./clip-tri-inverted.svg#svgClip);
-}
-
-@mixin clip-gem-inverted(){
-	-webkit-clip-path:polygon(37% 75%, 50% 85%, 63% 75%, 75% 25%, 50% 10%, 25% 25%);
-		-ms-clip-path:polygon(37% 75%, 50% 85%, 63% 75%, 75% 25%, 50% 10%, 25% 25%);
-			clip-path:polygon(37% 75%, 50% 85%, 63% 75%, 75% 25%, 50% 10%, 25% 25%);
-	clip-path: url(./clip-gem-inverted.svg#svgClip);
-}
-
-@mixin clip-tri-unchanging(){
-
-	-webkit-clip-path:polygon(0% 93.301270189%, 100% 93.301270189%, 50% 6.69872981%);
-	-ms-clip-path:polygon(0% 6.69872981%, 100% 6.69872981%, 50% 93.301270%);
-	clip-path:polygon(0% 6.69872981%, 100% 6.69872981%, 50% 93.301270);
-
-	clip-path: url(./clip-tri-full.svg#svgClip);
-}
-
-@mixin clip-tri-unchanging-inverted(){
-
-	-webkit-clip-path:polygon(0% 6.69872981%, 100% 6.69872981%, 50% 93.301270189%);
-	-ms-clip-path:polygon(0% 6.69872981%, 100% 6.69872981%, 50% 93.301270%);
-	clip-path:polygon(0% 6.69872981%, 100% 6.69872981%, 50% 93.301270);
-	clip-path: url(./clip-tri-full-inverted.svg#svgClip);
-}
-
-@mixin columns($n){
-		-webkit-column-count: $n; /* Chrome, Safari, Opera */
-		-moz-column-count: $n; /* Firefox */
-		column-count: $n;
-		
-}
-
-$color-transwhite: rgba(255, 255, 255, 0.2);
-
-$time-fast: 500ms;
-$time-slow: 2000ms;
-
-$textcolor: rgba(255,255,255,0.85);
+@import 'common';
 
 @font-face {
   font-family: 'Wire One';
@@ -172,8 +95,6 @@ body, html, #folds, .content{
 
 /*color changing masks*/
 
-$masklayer: 1;
-$contentlayer:3;
 body:before{
 	content:"";
 	position:fixed;
@@ -221,15 +142,15 @@ body.mus:before{
 	}
 
 	&:nth-child(1){
-		background-image: url("./hipsters_1.jpg");
+		background-image: url("../img/hipsters_1.jpg");
 	}&:nth-child(2){
-		background-image: url("./hipsters_2.jpg");
+		background-image: url("../img/hipsters_2.jpg");
 	}&:nth-child(3){
-		background-image: url("./hipsters_3.jpg");
+		background-image: url("../img/hipsters_3.jpg");
 	}&:nth-child(4){
-		background-image: url("./hipsters_4.jpg");
+		background-image: url("../img/hipsters_4.jpg");
 	}&:nth-child(5){
-		background-image: url("./hipsters_5.jpg");
+		background-image: url("../img/hipsters_5.jpg");
 	}
 }
 
@@ -339,8 +260,6 @@ hr.triplecross, hr.triplecross:before, hr.triplecross:after{
 }
 
 
-
-$barnav-height:120px;
 #barnav{
 	@include transitions($time-fast);
 	@include transitions-layer;
@@ -383,7 +302,7 @@ $barnav-height:120px;
 	}
 }
 
-body:not(.rut) #barnav{
+body.pastrut #barnav{
 	background-color:rgba(0,0,0,0.6);
 	bottom:-20px;
 }
@@ -569,46 +488,13 @@ p, li{
 
 
 
-
-body.intro, body.pace-running{
-	#rut{
-		height:100%;
-
-		#titlehex{
-			img, p{
-				opacity:0;
-			}
-		}
-
-		hr{
-			width:0;
-		}
-
-		#barnav{
-			opacity:0;
-			bottom: -$barnav-height;
-			zoom:110%;		}
-	}
-
-	&:before{
-		background-color:rgba(20,20,20,1);
-	}
-
-	.fold{
-		height:0;
-	}
-}
-
-
 @media screen and (max-width:540px){
 
-	$smallwidth: 320px;
-
 	#titlehex{
-		width:$smallwidth;
-		height:$smallwidth;
-		margin-left:- $smallwidth/2;
-		margin-top:- $smallwidth/2 - 13px - $tc-offset;
+		width:$smallestwidth;
+		height:$smallestwidth;
+		margin-left:- $smallestwidth/2;
+		margin-top:- $smallestwidth/2 - 13px - $tc-offset;
 
 		p{
 			margin-top:-16px;

@@ -1,0 +1,93 @@
+@import 'common';
+
+$dim-progress:100px;
+
+$light: #CCCCCC;
+$dark: #111111;
+
+.pace{
+	height:$dim-progress;
+	width:$dim-progress;
+	position:fixed;
+	top:50%;
+	left:50%;
+	margin-left: - $dim-progress/2;
+	margin-top: - $dim-progress/2;
+	z-index: $loadlayer;
+
+	pointer-events:none;	
+	@include clip-gem();
+	@include transitions-layer;
+
+	-webkit-transition-property: -webkit-clip-path, background-color;
+	-webkit-transition-duration: 0.5s;
+	-webkit-transition-delay: 0s, 1.0s;
+}
+
+.pace-progress{
+
+	position:absolute;
+	left:0;
+	top:0;
+	right:0;
+
+	height:100%;
+
+	@include transitions($time-fast);
+	opacity:1;
+
+	background-color: $light;
+
+	-webkit-transition-delay: 2.0s 0s;
+
+
+}
+
+.pace-inactive, {
+
+	.pace-progress{
+		opacity:0;
+	}
+}
+
+body.intro, body.pace-running{
+	#rut{
+		height:100%;
+
+		#titlehex{
+			img, p{
+				opacity:0;
+			}
+		}
+
+		hr{
+			width:0;
+		}
+
+		#barnav{
+			opacity:0;
+			bottom: -$barnav-height;
+			zoom:110%;		}
+	}
+
+
+	#folds:before{
+		background-color:$dark;
+	}
+}
+
+
+#folds:before{
+	content:"";
+	position:fixed;
+	left:0;
+	right:0;
+	top:0;
+	bottom:0;
+	z-index: $loadlayer - 1;
+
+	background-color:rgba($dark, 0);
+
+	pointer-events:none;
+	@include transitions($time-fast);
+}

@@ -11,18 +11,13 @@
   -webkit-clip-path: polygon(37% 25%, 50% 15%, 63% 25%, 75% 75%, 50% 90%, 25% 75%);
   -ms-clip-path: polygon(37% 25%, 50% 15%, 63% 25%, 75% 75%, 50% 90%, 25% 75%);
   clip-path: polygon(37% 25%, 50% 15%, 63% 25%, 75% 75%, 50% 90%, 25% 75%);
-  clip-path: url(../css/clip-gem.svg#svgClip);
+  clip-path: url(../svg/clip-gem.svg#svgClip);
   /*transform*/
   -webkit-transform: translateZ(0);
   -moz-transform: translateZ(0);
   -ms-transform: translateZ(0);
   -o-transform: translateZ(0);
   transform: translateZ(0);
-  -webkit-transition: all 500ms;
-  -moz-transition: all 500ms;
-  -ms-transition: all 500ms;
-  -o-transition: all 500ms;
-  transition: all 500ms;
   -webkit-transition-property: -webkit-clip-path, background-color;
   -webkit-transition-duration: 0.5s;
   -webkit-transition-delay: 0s, 1.0s; }
@@ -33,22 +28,17 @@
   top: 0;
   right: 0;
   height: 100%;
-  -webkit-transition: opacity 500ms, width 500ms;
-  -moz-transition: opacity 500ms, width 500ms;
-  -ms-transition: opacity 500ms, width 500ms;
-  -o-transition: opacity 500ms, width 500ms;
-  transition: opacity 500ms, width 500ms;
+  -webkit-transition: all 500ms;
+  -moz-transition: all 500ms;
+  -ms-transition: all 500ms;
+  -o-transition: all 500ms;
+  transition: all 500ms;
   opacity: 1;
   background-color: #cccccc;
   -webkit-transition-delay: 2.0s 0s; }
 
-.pace-inactive {
-  -webkit-clip-path: polygon(37% 25%, 50% 15%, 63% 25%, 75% 75%, 50% 90%, 25% 75%);
-  -ms-clip-path: polygon(37% 25%, 50% 15%, 63% 25%, 75% 75%, 50% 90%, 25% 75%);
-  clip-path: polygon(37% 25%, 50% 15%, 63% 25%, 75% 75%, 50% 90%, 25% 75%);
-  clip-path: url(../css/clip-gem.svg#svgClip); }
-  .pace-inactive .pace-progress {
-    opacity: 0; }
+.pace-inactive .pace-progress {
+  opacity: 0; }
 
 body.intro #rut, body.pace-running #rut {
   height: 100%; }
@@ -60,5 +50,21 @@ body.intro #rut, body.pace-running #rut {
     opacity: 0;
     bottom: -120px;
     zoom: 110%; }
-body.intro:before, body.pace-running:before {
-  background-color: #141414; }
+body.intro #folds:before, body.pace-running #folds:before {
+  background-color: #111111; }
+
+#folds:before {
+  content: "";
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 99;
+  background-color: rgba(17, 17, 17, 0);
+  pointer-events: none;
+  -webkit-transition: all 500ms;
+  -moz-transition: all 500ms;
+  -ms-transition: all 500ms;
+  -o-transition: all 500ms;
+  transition: all 500ms; }
