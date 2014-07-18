@@ -34,6 +34,7 @@ $dark: #111111;
 	height:100%;
 
 	@include transitions($time-fast);
+	@include transitions-layer;
 	opacity:1;
 
 	background-color: $light;

@@ -33,6 +33,12 @@
   -ms-transition: all 500ms;
   -o-transition: all 500ms;
   transition: all 500ms;
+  /*transform*/
+  -webkit-transform: translateZ(0);
+  -moz-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  -o-transform: translateZ(0);
+  transform: translateZ(0);
   opacity: 1;
   background-color: #cccccc;
   -webkit-transition-delay: 2.0s 0s; }

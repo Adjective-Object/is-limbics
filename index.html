@@ -165,7 +165,7 @@
 
 			<a href="#">
 				<img src="./img/albums/places.jpg" alt="album_places">
-				<h2>turn it up, faggot</h2>
+				<h2>turn it up, faggit</h2>
 				<p>
 					Motherfucker arse frig turd bloody twot motherfucker. Motherfucker bollix minge bollix ballbag piss wanker asshole turd wee cock turd thundercunt bastard. <br><br>Minge fuckstick cumbubble
 				</p>
@@ -174,63 +174,7 @@
 		
 		</section>
 
-		<svg width="0" height="0">
-			<clippath id="clip-tri" clipPathUnits="objectBoundingBox">
-				<polygon points="0.50 0.25, 0.50 0.25, 0.50 0.25, 0.70 0.75, 0.50 0.75, 0.25 0.75">
-				</polygon>
-			</clippath>
-			<clippath id="clip-gem" clipPathUnits="objectBoundingBox">
-				<polygon points="0.37 0.25, 0.50 0.15, 0.63 0.25, 0.75 0.75, 0.50 0.90, 0.25 0.75">
-				</polygon>
-			</clippath>
-			<clipPath id="clipping">
-				<circle cx="284" cy="213" r="213" />
-			</clipPath>
-		</svg>
-
-
-		<script type="text/javascript" src="jquery-2.0.3.min.js"></script>
-		<script type="text/javascript">
-
-		$(document).ready(function(){
-
-			$(".intro").each( function(index, item){
-				$(item).removeClass("intro");
-			});
-
-			bodyclasses();
-
-			$.fx.interval = 1000/60;
-
-		});
-
-		function bodyclasses(){
-			if ($(window).scrollTop() + $(window).height()/2 > $(".fold:nth-child(2)").offset().top){
-				console.log("i");
-				$("body").addClass("pastrut");
-			}else{
-				$("body").removeClass("pastrut");
-			}
-		}
-
-		$(window).scroll(bodyclasses);
-		bodyclasses();
-
-		$("a").click(function(evt){
-			if(this.pathname == window.location.pathname){
-				evt.preventDefault();
-				if( this.hash != ""){
-					x = this.hash;
-					$('html, body').animate({
-						scrollTop: $(x).offset().top
-					}, 500, "swing", function(){
-						window.location.hash = (x =="#rut")? "" : x;
-					});
-				}
-			}
-		})
-
-		</script>
-		
+		<script type="text/javascript" src="js/jquery-2.0.3.min.js"></script>
+		<script type="text/javascript" src="js/limbics.js"></script>
 	</body>
 </html>
