@@ -18,9 +18,12 @@
   -ms-transform: translateZ(0);
   -o-transform: translateZ(0);
   transform: translateZ(0);
-  -webkit-transition-property: -webkit-clip-path, background-color;
-  -webkit-transition-duration: 0.5s;
-  -webkit-transition-delay: 0s, 1.0s; }
+  -webkit-transition: all 500ms;
+  -moz-transition: all 500ms;
+  -ms-transition: all 500ms;
+  -o-transition: all 500ms;
+  transition: all 500ms;
+  opacity: 1; }
 
 .pace-progress {
   position: absolute;
@@ -33,17 +36,9 @@
   -ms-transition: all 500ms;
   -o-transition: all 500ms;
   transition: all 500ms;
-  /*transform*/
-  -webkit-transform: translateZ(0);
-  -moz-transform: translateZ(0);
-  -ms-transform: translateZ(0);
-  -o-transform: translateZ(0);
-  transform: translateZ(0);
-  opacity: 1;
-  background-color: #cccccc;
-  -webkit-transition-delay: 2.0s 0s; }
+  background-color: #cccccc; }
 
-.pace-inactive .pace-progress {
+.pace-inactive {
   opacity: 0; }
 
 body.intro #rut, body.pace-running #rut {

@@ -17,17 +17,17 @@
 
 @mixin clip-tri(){
 
-	-webkit-clip-path:polygon(50% 25%, 50% 25%, 50% 25%, 75% 75%, 50% 75%, 25% 75%);
-	-ms-clip-path:polygon(50% 25%, 50% 25%, 50% 25%, 75% 75%, 50% 75%, 25% 75%);
-	clip-path:polygon(50% 25%, 50% 25%, 50% 25%, 75% 75%, 50% 75%, 25% 75%);
+	-webkit-clip-path:	polygon(50% 25%, 50% 25%, 50% 25%, 75% 75%, 50% 75%, 25% 75%);
+	-ms-clip-path:		polygon(50% 25%, 50% 25%, 50% 25%, 75% 75%, 50% 75%, 25% 75%);
+	clip-path:			polygon(50% 25%, 50% 25%, 50% 25%, 75% 75%, 50% 75%, 25% 75%);
 	clip-path: url(../svg/clip-tri.svg#svgClip);
 }
 
 @mixin clip-gem(){
 
-	-webkit-clip-path:polygon(37% 25%, 50% 15%, 63% 25%, 75% 75%, 50% 90%, 25% 75%);
-		-ms-clip-path:polygon(37% 25%, 50% 15%, 63% 25%, 75% 75%, 50% 90%, 25% 75%);
-		    clip-path:polygon(37% 25%, 50% 15%, 63% 25%, 75% 75%, 50% 90%, 25% 75%);
+	-webkit-clip-path:	polygon(37% 25%, 50% 15%, 63% 25%, 75% 75%, 50% 90%, 25% 75%);
+		-ms-clip-path:	polygon(37% 25%, 50% 15%, 63% 25%, 75% 75%, 50% 90%, 25% 75%);
+		    clip-path:	polygon(37% 25%, 50% 15%, 63% 25%, 75% 75%, 50% 90%, 25% 75%);
 	clip-path: url(../svg/clip-gem.svg#svgClip);
 }
 
