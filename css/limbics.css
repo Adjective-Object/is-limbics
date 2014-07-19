@@ -296,12 +296,15 @@ p, li {
   width: 420px; }
 #nws h2 {
   margin-bottom: 0px; }
-#nws p {
+#nws .text {
+  padding: 18px;
   -webkit-column-count: 3;
   /* Chrome, Safari, Opera */
   -moz-column-count: 3;
   /* Firefox */
   column-count: 3; }
+  #nws .text p {
+    padding: 0; }
 
 #abt img {
   float: right;
@@ -418,7 +421,7 @@ p, li {
       margin-left: -16px;
       margin-right: -16px; }
 
-  #nws p {
+  #nws .text {
     -webkit-column-count: 1;
     /* Chrome, Safari, Opera */
     -moz-column-count: 1;

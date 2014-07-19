@@ -370,9 +370,12 @@ p, li{
 	h2{
 		margin-bottom:0px;
 	}
-
-	p{	
+	.text{
+		padding:18px;
 		@include columns(3);
+		p{
+			padding:0;
+		}
 	}
 }
 
@@ -529,7 +532,7 @@ p, li{
 	}
 
 	#nws{
-		p{
+		.text{
 			@include columns(1);
 		}
 	}
