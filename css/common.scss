@@ -28,8 +28,17 @@
 	-webkit-clip-path:	polygon(37% 25%, 50% 15%, 63% 25%, 75% 75%, 50% 90%, 25% 75%);
 		-ms-clip-path:	polygon(37% 25%, 50% 15%, 63% 25%, 75% 75%, 50% 90%, 25% 75%);
 		    clip-path:	polygon(37% 25%, 50% 15%, 63% 25%, 75% 75%, 50% 90%, 25% 75%);
-	clip-path: url(../svg/clip-gem.svg#svgClip);
+	clip-path: url(../svg/clip-gem-full.svg#svgClip);
 }
+
+@mixin clip-gem-full(){
+
+	-webkit-clip-path:	polygon(32.1% 13.6%, 50% 0%, 66.9% 13.4%, 82.9% 80.1%, 50% 100%, 16.2% 80.1%);
+		-ms-clip-path:	polygon(32.1% 13.6%, 50% 0%, 66.9% 13.4%, 82.9% 80.1%, 50% 100%, 16.2% 80.1%);
+		    clip-path:	polygon(32.1% 13.6%, 50% 0%, 66.9% 13.4%, 82.9% 80.1%, 50% 100%, 16.2% 80.1%);
+	clip-path: url(../svg/clip-gem-full.svg#svgClip);
+}
+
 
 @mixin clip-tri-inverted(){
 

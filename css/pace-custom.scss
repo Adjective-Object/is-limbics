@@ -16,7 +16,7 @@ $dark: #111111;
 	z-index: $loadlayer;
 
 	pointer-events:none;
-	@include clip-gem();
+	@include clip-gem-full();
 	@include transitions-layer;
 	@include transitions($time-fast);
 
@@ -24,17 +24,35 @@ $dark: #111111;
 }
 
 .pace-progress{
+	height: 100%;
 
-	position:absolute;
-	left:0;
-	top:0;
-	right:0;
-
-	height:100%;
-
+	position:relative;
 	@include transitions($time-fast);
 
 	background-color: $light;
+
+
+	z-index:$loadlayer+2;
+
+	&:after, &:before {
+		position:absolute;
+		display:block;
+		font-family:Raleway;
+		content: attr(data-progress-text);
+		text-align:center;
+		top:60%;
+		font-size:14px;
+		margin-top:-3px;
+		left:2px;
+
+		width:100px;
+	}
+
+	&:after{
+		color:#888888;
+		z-index:$loadlayer+3;
+		overflow:hidden;
+	}
 }
 
 .pace-inactive, {

@@ -8,10 +8,10 @@
   margin-top: -50px;
   z-index: 100;
   pointer-events: none;
-  -webkit-clip-path: polygon(37% 25%, 50% 15%, 63% 25%, 75% 75%, 50% 90%, 25% 75%);
-  -ms-clip-path: polygon(37% 25%, 50% 15%, 63% 25%, 75% 75%, 50% 90%, 25% 75%);
-  clip-path: polygon(37% 25%, 50% 15%, 63% 25%, 75% 75%, 50% 90%, 25% 75%);
-  clip-path: url(../svg/clip-gem.svg#svgClip);
+  -webkit-clip-path: polygon(32.1% 13.6%, 50% 0%, 66.9% 13.4%, 82.9% 80.1%, 50% 100%, 16.2% 80.1%);
+  -ms-clip-path: polygon(32.1% 13.6%, 50% 0%, 66.9% 13.4%, 82.9% 80.1%, 50% 100%, 16.2% 80.1%);
+  clip-path: polygon(32.1% 13.6%, 50% 0%, 66.9% 13.4%, 82.9% 80.1%, 50% 100%, 16.2% 80.1%);
+  clip-path: url(../svg/clip-gem-full.svg#svgClip);
   /*transform*/
   -webkit-transform: translateZ(0);
   -moz-transform: translateZ(0);
@@ -26,17 +26,30 @@
   opacity: 1; }
 
 .pace-progress {
-  position: absolute;
-  left: 0;
-  top: 0;
-  right: 0;
   height: 100%;
+  position: relative;
   -webkit-transition: all 500ms;
   -moz-transition: all 500ms;
   -ms-transition: all 500ms;
   -o-transition: all 500ms;
   transition: all 500ms;
-  background-color: #cccccc; }
+  background-color: #cccccc;
+  z-index: 102; }
+  .pace-progress:after, .pace-progress:before {
+    position: absolute;
+    display: block;
+    font-family: Raleway;
+    content: attr(data-progress-text);
+    text-align: center;
+    top: 60%;
+    font-size: 14px;
+    margin-top: -3px;
+    left: 2px;
+    width: 100px; }
+  .pace-progress:after {
+    color: #888888;
+    z-index: 103;
+    overflow: hidden; }
 
 .pace-inactive {
   opacity: 0; }
