@@ -1,49 +1,57 @@
 .pace {
-  height: 100px;
-  width: 100px;
+  height: 80px;
+  width: 80px;
   position: fixed;
   top: 50%;
   left: 50%;
-  margin-left: -50px;
-  margin-top: -50px;
+  margin-left: -40px;
+  margin-top: -40px;
   z-index: 100;
   pointer-events: none;
-  -webkit-clip-path: polygon(37% 25%, 50% 15%, 63% 25%, 75% 75%, 50% 90%, 25% 75%);
-  -ms-clip-path: polygon(37% 25%, 50% 15%, 63% 25%, 75% 75%, 50% 90%, 25% 75%);
-  clip-path: polygon(37% 25%, 50% 15%, 63% 25%, 75% 75%, 50% 90%, 25% 75%);
-  clip-path: url(../svg/clip-gem.svg#svgClip);
+  -webkit-clip-path: polygon(32.1% 13.6%, 50% 0%, 66.9% 13.4%, 82.9% 80.1%, 50% 100%, 16.2% 80.1%);
+  -ms-clip-path: polygon(32.1% 13.6%, 50% 0%, 66.9% 13.4%, 82.9% 80.1%, 50% 100%, 16.2% 80.1%);
+  clip-path: polygon(32.1% 13.6%, 50% 0%, 66.9% 13.4%, 82.9% 80.1%, 50% 100%, 16.2% 80.1%);
+  clip-path: url(../svg/clip-gem-full.svg#svgClip);
   /*transform*/
   -webkit-transform: translateZ(0);
   -moz-transform: translateZ(0);
   -ms-transform: translateZ(0);
   -o-transform: translateZ(0);
   transform: translateZ(0);
-  -webkit-transition-property: -webkit-clip-path, background-color;
-  -webkit-transition-duration: 0.5s;
-  -webkit-transition-delay: 0s, 1.0s; }
-
-.pace-progress {
-  position: absolute;
-  left: 0;
-  top: 0;
-  right: 0;
-  height: 100%;
   -webkit-transition: all 500ms;
   -moz-transition: all 500ms;
   -ms-transition: all 500ms;
   -o-transition: all 500ms;
   transition: all 500ms;
-  /*transform*/
-  -webkit-transform: translateZ(0);
-  -moz-transform: translateZ(0);
-  -ms-transform: translateZ(0);
-  -o-transform: translateZ(0);
-  transform: translateZ(0);
-  opacity: 1;
-  background-color: #cccccc;
-  -webkit-transition-delay: 2.0s 0s; }
+  opacity: 1; }
 
-.pace-inactive .pace-progress {
+.pace-progress {
+  height: 100%;
+  position: relative;
+  -webkit-transition: all 500ms;
+  -moz-transition: all 500ms;
+  -ms-transition: all 500ms;
+  -o-transition: all 500ms;
+  transition: all 500ms;
+  background-color: #cccccc;
+  z-index: 102; }
+  .pace-progress:after, .pace-progress:before {
+    position: absolute;
+    display: block;
+    font-family: Raleway;
+    content: attr(data-progress-text);
+    text-align: center;
+    top: 60%;
+    font-size: 14px;
+    margin-top: -3px;
+    left: 2px;
+    width: 80px; }
+  .pace-progress:after {
+    color: #888888;
+    z-index: 103;
+    overflow: hidden; }
+
+.pace-inactive {
   opacity: 0; }
 
 body.intro #rut, body.pace-running #rut {

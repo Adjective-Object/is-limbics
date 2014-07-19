@@ -70,7 +70,7 @@ svg {
   -webkit-clip-path: polygon(37% 25%, 50% 15%, 63% 25%, 75% 75%, 50% 90%, 25% 75%);
   -ms-clip-path: polygon(37% 25%, 50% 15%, 63% 25%, 75% 75%, 50% 90%, 25% 75%);
   clip-path: polygon(37% 25%, 50% 15%, 63% 25%, 75% 75%, 50% 90%, 25% 75%);
-  clip-path: url(../svg/clip-gem.svg#svgClip); }
+  clip-path: url(../svg/clip-gem-full.svg#svgClip); }
   .shifter:hover p, .gem p {
     top: 60%; }
 
@@ -347,6 +347,12 @@ p, li {
   #mus > h2 {
     margin-bottom: 20px; }
   #mus a {
+    /*transform*/
+    -webkit-transform: translateZ(0);
+    -moz-transform: translateZ(0);
+    -ms-transform: translateZ(0);
+    -o-transform: translateZ(0);
+    transform: translateZ(0);
     position: relative;
     display: inline-block;
     width: 160px;

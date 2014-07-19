@@ -1,6 +1,6 @@
 @import 'common';
 
-$dim-progress:100px;
+$dim-progress:80px;
 
 $light: #CCCCCC;
 $dark: #111111;
@@ -15,40 +15,48 @@ $dark: #111111;
 	margin-top: - $dim-progress/2;
 	z-index: $loadlayer;
 
-	pointer-events:none;	
-	@include clip-gem();
+	pointer-events:none;
+	@include clip-gem-full();
 	@include transitions-layer;
+	@include transitions($time-fast);
 
-	-webkit-transition-property: -webkit-clip-path, background-color;
-	-webkit-transition-duration: 0.5s;
-	-webkit-transition-delay: 0s, 1.0s;
+	opacity:1;
 }
 
 .pace-progress{
+	height: 100%;
 
-	position:absolute;
-	left:0;
-	top:0;
-	right:0;
-
-	height:100%;
-
+	position:relative;
 	@include transitions($time-fast);
-	@include transitions-layer;
-	opacity:1;
 
 	background-color: $light;
 
-	-webkit-transition-delay: 2.0s 0s;
 
+	z-index:$loadlayer+2;
 
+	&:after, &:before {
+		position:absolute;
+		display:block;
+		font-family:Raleway;
+		content: attr(data-progress-text);
+		text-align:center;
+		top:60%;
+		font-size:14px;
+		margin-top:-3px;
+		left:2px;
+
+		width:$dim-progress;
+	}
+
+	&:after{
+		color:#888888;
+		z-index:$loadlayer+3;
+		overflow:hidden;
+	}
 }
 
 .pace-inactive, {
-
-	.pace-progress{
-		opacity:0;
-	}
+	opacity:0;
 }
 
 body.intro, body.pace-running{
@@ -76,7 +84,6 @@ body.intro, body.pace-running{
 		background-color:$dark;
 	}
 }
-
 
 #folds:before{
 	content:"";

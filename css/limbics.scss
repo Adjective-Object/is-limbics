@@ -434,6 +434,7 @@ p, li{
 	$g: 160px;
 
 	a{
+		@include transitions-layer;
 		position:relative;
 		display:inline-block;
 		width:$g;
