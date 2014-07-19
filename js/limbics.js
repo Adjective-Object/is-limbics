@@ -11,7 +11,7 @@ $(document).ready(function(){
 });
 
 function bodyclasses(){
-	if ($(window).scrollTop() + $(window).height()/2 > $(".fold:nth-child(2)").offset().top){
+	if ($(window).scrollTop() + $(window).height() > $(".fold:nth-child(2)").offset().top){
 		$("body").addClass("pastrut");
 	}else{
 		$("body").removeClass("pastrut");

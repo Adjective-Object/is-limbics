@@ -19,24 +19,24 @@
 
 	-webkit-clip-path:	polygon(50% 25%, 50% 25%, 50% 25%, 75% 75%, 50% 75%, 25% 75%);
 	-ms-clip-path:		polygon(50% 25%, 50% 25%, 50% 25%, 75% 75%, 50% 75%, 25% 75%);
-	clip-path:			polygon(50% 25%, 50% 25%, 50% 25%, 75% 75%, 50% 75%, 25% 75%);
 	clip-path: url(../svg/clip-tri.svg#svgClip);
+	clip-path:			polygon(50% 25%, 50% 25%, 50% 25%, 75% 75%, 50% 75%, 25% 75%);
 }
 
 @mixin clip-gem(){
 
 	-webkit-clip-path:	polygon(37% 25%, 50% 15%, 63% 25%, 75% 75%, 50% 90%, 25% 75%);
 		-ms-clip-path:	polygon(37% 25%, 50% 15%, 63% 25%, 75% 75%, 50% 90%, 25% 75%);
+			clip-path: url(../svg/clip-gem-full.svg#svgClip);
 		    clip-path:	polygon(37% 25%, 50% 15%, 63% 25%, 75% 75%, 50% 90%, 25% 75%);
-	clip-path: url(../svg/clip-gem-full.svg#svgClip);
 }
 
 @mixin clip-gem-full(){
 
 	-webkit-clip-path:	polygon(32.1% 13.6%, 50% 0%, 66.9% 13.4%, 82.9% 80.1%, 50% 100%, 16.2% 80.1%);
 		-ms-clip-path:	polygon(32.1% 13.6%, 50% 0%, 66.9% 13.4%, 82.9% 80.1%, 50% 100%, 16.2% 80.1%);
-		    clip-path:	polygon(32.1% 13.6%, 50% 0%, 66.9% 13.4%, 82.9% 80.1%, 50% 100%, 16.2% 80.1%);
 	clip-path: url(../svg/clip-gem-full.svg#svgClip);
+		    clip-path:	polygon(32.1% 13.6%, 50% 0%, 66.9% 13.4%, 82.9% 80.1%, 50% 100%, 16.2% 80.1%);
 }
 
 
@@ -44,32 +44,32 @@
 
 	-webkit-clip-path:polygon(50% 75%, 50% 75%, 50% 75%, 75% 25%, 50% 25%, 25% 25%);
 	-ms-clip-path:polygon(50% 75%, 50% 75%, 50% 75%, 75% 25%, 50% 25%, 25% 25%);
-	clip-path:polygon(50% 75%, 50% 75%, 50% 75%, 75% 25%, 50% 25%, 25% 25%);
 	clip-path: url(../svg/clip-tri-inverted.svg#svgClip);
+	clip-path:polygon(50% 75%, 50% 75%, 50% 75%, 75% 25%, 50% 25%, 25% 25%);
 }
 
 @mixin clip-gem-inverted(){
 	-webkit-clip-path:polygon(37% 75%, 50% 85%, 63% 75%, 75% 25%, 50% 10%, 25% 25%);
 		-ms-clip-path:polygon(37% 75%, 50% 85%, 63% 75%, 75% 25%, 50% 10%, 25% 25%);
-			clip-path:polygon(37% 75%, 50% 85%, 63% 75%, 75% 25%, 50% 10%, 25% 25%);
 	clip-path: url(../svg/clip-gem-inverted.svg#svgClip);
+			clip-path:polygon(37% 75%, 50% 85%, 63% 75%, 75% 25%, 50% 10%, 25% 25%);
 }
 
 @mixin clip-tri-unchanging(){
 
 	-webkit-clip-path:polygon(0% 93.301270189%, 100% 93.301270189%, 50% 6.69872981%);
 	-ms-clip-path:polygon(0% 6.69872981%, 100% 6.69872981%, 50% 93.301270%);
+	clip-path: url(../svg/clip-tri-full.svg#svgClip);
 	clip-path:polygon(0% 6.69872981%, 100% 6.69872981%, 50% 93.301270);
 
-	clip-path: url(../svg/clip-tri-full.svg#svgClip);
 }
 
 @mixin clip-tri-unchanging-inverted(){
 
 	-webkit-clip-path:polygon(0% 6.69872981%, 100% 6.69872981%, 50% 93.301270189%);
 	-ms-clip-path:polygon(0% 6.69872981%, 100% 6.69872981%, 50% 93.301270%);
-	clip-path:polygon(0% 6.69872981%, 100% 6.69872981%, 50% 93.301270);
 	clip-path: url(../svg/clip-tri-full-inverted.svg#svgClip);
+	clip-path:polygon(0% 6.69872981%, 100% 6.69872981%, 50% 93.301270);
 }
 
 @mixin columns($n){

@@ -63,14 +63,14 @@ svg {
 .tri, .shifter {
   -webkit-clip-path: polygon(50% 25%, 50% 25%, 50% 25%, 75% 75%, 50% 75%, 25% 75%);
   -ms-clip-path: polygon(50% 25%, 50% 25%, 50% 25%, 75% 75%, 50% 75%, 25% 75%);
-  clip-path: polygon(50% 25%, 50% 25%, 50% 25%, 75% 75%, 50% 75%, 25% 75%);
-  clip-path: url(../svg/clip-tri.svg#svgClip); }
+  clip-path: url(../svg/clip-tri.svg#svgClip);
+  clip-path: polygon(50% 25%, 50% 25%, 50% 25%, 75% 75%, 50% 75%, 25% 75%); }
 
 .shifter:hover, .gem {
   -webkit-clip-path: polygon(37% 25%, 50% 15%, 63% 25%, 75% 75%, 50% 90%, 25% 75%);
   -ms-clip-path: polygon(37% 25%, 50% 15%, 63% 25%, 75% 75%, 50% 90%, 25% 75%);
-  clip-path: polygon(37% 25%, 50% 15%, 63% 25%, 75% 75%, 50% 90%, 25% 75%);
-  clip-path: url(../svg/clip-gem-full.svg#svgClip); }
+  clip-path: url(../svg/clip-gem-full.svg#svgClip);
+  clip-path: polygon(37% 25%, 50% 15%, 63% 25%, 75% 75%, 50% 90%, 25% 75%); }
   .shifter:hover p, .gem p {
     top: 60%; }
 
@@ -291,8 +291,8 @@ p, li {
   display: inline-block;
   -webkit-clip-path: polygon(0% 6.69873%, 100% 6.69873%, 50% 93.30127%);
   -ms-clip-path: polygon(0% 6.69873%, 100% 6.69873%, 50% 93.30127%);
-  clip-path: polygon(0% 6.69873%, 100% 6.69873%, 50% 93.30127);
   clip-path: url(../svg/clip-tri-full-inverted.svg#svgClip);
+  clip-path: polygon(0% 6.69873%, 100% 6.69873%, 50% 93.30127);
   width: 420px; }
 #nws h2 {
   margin-bottom: 0px; }
@@ -307,8 +307,8 @@ p, li {
   float: right;
   -webkit-clip-path: polygon(0% 93.30127%, 100% 93.30127%, 50% 6.69873%);
   -ms-clip-path: polygon(0% 6.69873%, 100% 6.69873%, 50% 93.30127%);
-  clip-path: polygon(0% 6.69873%, 100% 6.69873%, 50% 93.30127);
-  clip-path: url(../svg/clip-tri-full.svg#svgClip); }
+  clip-path: url(../svg/clip-tri-full.svg#svgClip);
+  clip-path: polygon(0% 6.69873%, 100% 6.69873%, 50% 93.30127); }
 #abt p {
   padding-bottom: 0; }
 
@@ -321,8 +321,8 @@ p, li {
   margin-top: -15%;
   -webkit-clip-path: polygon(0% 6.69873%, 100% 6.69873%, 50% 93.30127%);
   -ms-clip-path: polygon(0% 6.69873%, 100% 6.69873%, 50% 93.30127%);
-  clip-path: polygon(0% 6.69873%, 100% 6.69873%, 50% 93.30127);
   clip-path: url(../svg/clip-tri-full-inverted.svg#svgClip);
+  clip-path: polygon(0% 6.69873%, 100% 6.69873%, 50% 93.30127);
   opacity: 0.2;
   pointer-events: none;
   z-index: 2; }

@@ -10,8 +10,8 @@
   pointer-events: none;
   -webkit-clip-path: polygon(32.1% 13.6%, 50% 0%, 66.9% 13.4%, 82.9% 80.1%, 50% 100%, 16.2% 80.1%);
   -ms-clip-path: polygon(32.1% 13.6%, 50% 0%, 66.9% 13.4%, 82.9% 80.1%, 50% 100%, 16.2% 80.1%);
-  clip-path: polygon(32.1% 13.6%, 50% 0%, 66.9% 13.4%, 82.9% 80.1%, 50% 100%, 16.2% 80.1%);
   clip-path: url(../svg/clip-gem-full.svg#svgClip);
+  clip-path: polygon(32.1% 13.6%, 50% 0%, 66.9% 13.4%, 82.9% 80.1%, 50% 100%, 16.2% 80.1%);
   /*transform*/
   -webkit-transform: translateZ(0);
   -moz-transform: translateZ(0);
