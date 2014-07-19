@@ -1,6 +1,6 @@
 @import 'common';
 
-$dim-progress:100px;
+$dim-progress:80px;
 
 $light: #CCCCCC;
 $dark: #111111;
@@ -45,7 +45,7 @@ $dark: #111111;
 		margin-top:-3px;
 		left:2px;
 
-		width:100px;
+		width:$dim-progress;
 	}
 
 	&:after{
