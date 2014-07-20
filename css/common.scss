@@ -6,6 +6,14 @@
 		transition: all $time;
 }
 
+@mixin transform($props){
+-webkit-transform: $props;
+   -moz-transform: $props;
+    -ms-transform: $props;
+     -o-transform: $props;
+        transform: $props;
+}
+
 @mixin transitions-layer(){
 /*transform*/
 -webkit-transform:translateZ(0);
@@ -57,12 +65,14 @@
 
 @mixin clip-tri-unchanging(){
 
-	-webkit-clip-path:polygon(0% 93.301270189%, 100% 93.301270189%, 50% 6.69872981%);
-	-ms-clip-path:polygon(0% 6.69872981%, 100% 6.69872981%, 50% 93.301270%);
+	-webkit-clip-path:polygon(0% 93.3%, 100% 93.3%, 50% 6.7%);
+	-ms-clip-path:polygon(0% 93.3%, 100% 93.3%, 50% 6.7%);
 	clip-path: url(../svg/clip-tri-full.svg#svgClip);
-	clip-path:polygon(0% 6.69872981%, 100% 6.69872981%, 50% 93.301270);
+	clip-path: polygon(0% 93.3%, 100% 93.3%, 50% 6.7%);
 
 }
+
+
 
 @mixin clip-tri-unchanging-inverted(){
 
@@ -96,3 +106,6 @@ $smallestwidth: 320px;
 
 
 $barnav-height:120px;
+
+$social-icon-size:28px;
+$social-icon-padding:8px;

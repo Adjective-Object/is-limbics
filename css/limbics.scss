@@ -4,15 +4,23 @@
   font-family: 'Wire One';
   font-style: normal;
   font-weight: 400;
-  src: local('Wire One'), local('WireOne'), url(./wire1.woff) format('woff');
+  src: local('Wire One'), local('WireOne'), url(../fonts/wire1.woff) format('woff');
 }
 
 @font-face {
   font-family: 'Proxima Nova';
   font-style: normal;
   font-weight: 400;
-  src: local('Proxima Nova'), local('WireOne'), url("./proximanova-regular-webfont.woff") format('woff');
+  src: local('Proxima Nova'), local('ProximaNova'), url("../fonts/proximanova-regular-webfont.woff") format('woff');
 }
+
+@font-face {
+  font-family: 'Font Awesome';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Font Awesome'), local('FontAwesome'), url("../fonts/fontawesome-webfont.woff") format('woff');
+}
+
 
 /*basic reset*/
 *, *:after, *:before{
@@ -33,6 +41,11 @@ body, #barnav {
 
 svg{
 	display:none;
+}
+
+.fa{
+	font-family:Font Awesome !important;
+	text-decoration:none;
 }
 
 .shifter, .tri, .gem {
@@ -357,6 +370,10 @@ p, li{
 
 #nws, #abt{
 	text-indent:24px;
+
+	a{
+		color:$textcolor;
+	}
 }
 
 #nws{
@@ -388,6 +405,94 @@ p, li{
 	p{
 		padding-bottom:0;
 	}
+
+	.links{
+		margin-top:18px;
+	}
+
+	.social{
+		display:inline-block;
+		text-indent:0;
+		position:relative;
+		text-decoration:none;
+		font-family:Wire One;
+		font-size:32px;
+
+		margin-right:$social-icon-size*1.5 + $social-icon-padding;
+
+		@include transform(translate3D(0,0,0));
+		@include transitions($time-fast);	
+
+		&:before{
+			font-family:Font Awesome;
+			z-index:4;
+			position:absolute;
+			display:inline-block;
+			opacity:0;
+			width:$social-icon-size*1.5;
+			text-align:center;
+			top:40%;
+			@include transform(translate3D(0,0,0));
+			@include transitions($time-fast);
+
+			font-size:$social-icon-size*0.6;
+		}
+
+		&:hover{
+			@include transform(translate3D($social-icon-size+$social-icon-padding,0,0));
+			&:before{
+				@include transform(translate3D(-$social-icon-size*1.5-$social-icon-padding,0,0));
+				left:0px;
+				opacity:1;
+				color:#333333;
+			}
+
+			&:after{
+				width:$social-icon-size*1.5;
+				height:$social-icon-size*1.5;
+				@include transform(translate3D(0,0,0));
+			}
+		}
+
+		&:after{
+			z-index:3;
+			content:"";
+			
+			width:0;
+			height:0;
+			
+			position:absolute;
+			left:-$social-icon-size*1.5 - $social-icon-padding;
+			top:-$social-icon-size*0.2;
+
+			background-color:$textcolor;
+
+			@include clip-tri-unchanging;
+			@include transitions($time-fast);
+			@include transform(translate3D(
+				$social-icon-size*1.5/2+$social-icon-size,
+				$social-icon-size*1.5/2,
+				0));
+		}
+
+	}
+
+	.social.soundcloud:before{
+		content:"\f1be";
+	}
+
+	.social.facebook:before{
+		content:"\f09a";
+	}
+
+	.social.github:before{
+		content:"\f113";
+	}
+
+	.social.twitter:before{
+		content:"\f099";
+	}
+
 }
 
 #tou{
