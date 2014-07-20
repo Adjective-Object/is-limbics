@@ -336,7 +336,7 @@ p, li {
   text-decoration: none;
   font-family: Wire One;
   font-size: 32px;
-  margin-right: 50px;
+  padding-left: 0;
   -webkit-transform: translate3D(0, 0, 0);
   -moz-transform: translate3D(0, 0, 0);
   -ms-transform: translate3D(0, 0, 0);
@@ -346,58 +346,38 @@ p, li {
   -moz-transition: all 500ms;
   -ms-transition: all 500ms;
   -o-transition: all 500ms;
-  transition: all 500ms; }
+  transition: all 500ms;
+  padding-right: 40px;
+  margin-right: 12px; }
   #abt .social:before {
     font-family: Font Awesome;
-    z-index: 4;
+    display: block;
     position: absolute;
-    display: inline-block;
-    opacity: 0;
-    width: 42px;
-    text-align: center;
+    z-index: 4;
     top: 40%;
-    -webkit-transform: translate3D(0, 0, 0);
-    -moz-transform: translate3D(0, 0, 0);
-    -ms-transform: translate3D(0, 0, 0);
-    -o-transform: translate3D(0, 0, 0);
-    transform: translate3D(0, 0, 0);
+    left: 0;
+    opacity: 0;
+    width: 32px;
+    text-align: center;
     -webkit-transition: all 500ms;
     -moz-transition: all 500ms;
     -ms-transition: all 500ms;
     -o-transition: all 500ms;
     transition: all 500ms;
-    font-size: 16.8px; }
-  #abt .social:hover {
-    -webkit-transform: translate3D(36px, 0, 0);
-    -moz-transform: translate3D(36px, 0, 0);
-    -ms-transform: translate3D(36px, 0, 0);
-    -o-transform: translate3D(36px, 0, 0);
-    transform: translate3D(36px, 0, 0); }
-    #abt .social:hover:before {
-      -webkit-transform: translate3D(-50px, 0, 0);
-      -moz-transform: translate3D(-50px, 0, 0);
-      -ms-transform: translate3D(-50px, 0, 0);
-      -o-transform: translate3D(-50px, 0, 0);
-      transform: translate3D(-50px, 0, 0);
-      left: 0px;
-      opacity: 1;
-      color: #333333; }
-    #abt .social:hover:after {
-      width: 42px;
-      height: 42px;
-      -webkit-transform: translate3D(0, 0, 0);
-      -moz-transform: translate3D(0, 0, 0);
-      -ms-transform: translate3D(0, 0, 0);
-      -o-transform: translate3D(0, 0, 0);
-      transform: translate3D(0, 0, 0); }
+    -webkit-transform: translate3D(16px, 0, 0);
+    -moz-transform: translate3D(16px, 0, 0);
+    -ms-transform: translate3D(16px, 0, 0);
+    -o-transform: translate3D(16px, 0, 0);
+    transform: translate3D(16px, 0, 0);
+    font-size: 12.8px; }
   #abt .social:after {
     z-index: 3;
     content: "";
     width: 0;
     height: 0;
     position: absolute;
-    left: -50px;
-    top: -5.6px;
+    left: 0;
+    top: 0;
     background-color: rgba(255, 255, 255, 0.85);
     -webkit-clip-path: polygon(0% 93.3%, 100% 93.3%, 50% 6.7%);
     -ms-clip-path: polygon(0% 93.3%, 100% 93.3%, 50% 6.7%);
@@ -408,14 +388,35 @@ p, li {
     -ms-transition: all 500ms;
     -o-transition: all 500ms;
     transition: all 500ms;
-    -webkit-transform: translate3D(49px, 21px, 0);
-    -moz-transform: translate3D(49px, 21px, 0);
-    -ms-transform: translate3D(49px, 21px, 0);
-    -o-transform: translate3D(49px, 21px, 0);
-    transform: translate3D(49px, 21px, 0); }
+    -webkit-transform: translate3D(16px, 16px, 0);
+    -moz-transform: translate3D(16px, 16px, 0);
+    -ms-transform: translate3D(16px, 16px, 0);
+    -o-transform: translate3D(16px, 16px, 0);
+    transform: translate3D(16px, 16px, 0); }
+  #abt .social:hover {
+    padding-left: 40px;
+    padding-right: 0; }
+    #abt .social:hover:before {
+      left: 0px;
+      opacity: 1;
+      color: #333333;
+      -webkit-transform: translate3D(0, 0, 0);
+      -moz-transform: translate3D(0, 0, 0);
+      -ms-transform: translate3D(0, 0, 0);
+      -o-transform: translate3D(0, 0, 0);
+      transform: translate3D(0, 0, 0); }
+    #abt .social:hover:after {
+      width: 32px;
+      height: 32px;
+      -webkit-transform: translate3D(0, 0, 0);
+      -moz-transform: translate3D(0, 0, 0);
+      -ms-transform: translate3D(0, 0, 0);
+      -o-transform: translate3D(0, 0, 0);
+      transform: translate3D(0, 0, 0); }
 #abt .social.soundcloud:before {
   content: "\f1be"; }
 #abt .social.facebook:before {
+  left: -1px;
   content: "\f09a"; }
 #abt .social.github:before {
   content: "\f113"; }
@@ -490,7 +491,8 @@ p, li {
       -ms-transition: all 500ms;
       -o-transition: all 500ms;
       transition: all 500ms; }
-    #mus a h2 {
+    #mus a s
+    h2 {
       color: rgba(255, 255, 255, 0.2);
       -webkit-transition: all 500ms;
       -moz-transition: all 500ms;

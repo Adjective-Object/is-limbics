@@ -419,41 +419,30 @@ p, li{
 		text-decoration:none;
 		font-family:Wire One;
 		font-size:32px;
-
-		margin-right:$social-icon-size*1.5 + $social-icon-padding;
+		padding-left:0;
 
 		@include transform(translate3D(0,0,0));
 		@include transitions($time-fast);	
 
+		$inter: $social-icon-size + $social-icon-padding;
+		padding-right:$inter;
+		margin-right:12px;
+
 		&:before{
 			font-family:Font Awesome;
-			z-index:4;
+			display:block;
 			position:absolute;
-			display:inline-block;
-			opacity:0;
-			width:$social-icon-size*1.5;
-			text-align:center;
+			z-index:4;
 			top:40%;
-			@include transform(translate3D(0,0,0));
+			left:0;
+			
+			opacity:0;
+			width:$social-icon-size;
+			text-align:center;
+			
 			@include transitions($time-fast);
-
-			font-size:$social-icon-size*0.6;
-		}
-
-		&:hover{
-			@include transform(translate3D($social-icon-size+$social-icon-padding,0,0));
-			&:before{
-				@include transform(translate3D(-$social-icon-size*1.5-$social-icon-padding,0,0));
-				left:0px;
-				opacity:1;
-				color:#333333;
-			}
-
-			&:after{
-				width:$social-icon-size*1.5;
-				height:$social-icon-size*1.5;
-				@include transform(translate3D(0,0,0));
-			}
+			@include transform(translate3D($social-icon-size/2,0,0));
+			font-size:$social-icon-size*0.4;
 		}
 
 		&:after{
@@ -464,18 +453,38 @@ p, li{
 			height:0;
 			
 			position:absolute;
-			left:-$social-icon-size*1.5 - $social-icon-padding;
-			top:-$social-icon-size*0.2;
+			left:0;
+			top:0;
 
 			background-color:$textcolor;
 
 			@include clip-tri-unchanging;
 			@include transitions($time-fast);
 			@include transform(translate3D(
-				$social-icon-size*1.5/2+$social-icon-size,
-				$social-icon-size*1.5/2,
+				$social-icon-size/2,
+				$social-icon-size/2,
 				0));
 		}
+
+
+		&:hover{
+			padding-left:$inter;
+			padding-right:0;
+
+			&:before{
+				left:0px;
+				opacity:1;
+				color:#333333;
+				@include transform(translate3D(0,0,0));
+			}
+
+			&:after{
+				width:$social-icon-size;
+				height:$social-icon-size;
+				@include transform(translate3D(0,0,0));
+			}
+		}
+
 
 	}
 
@@ -484,6 +493,7 @@ p, li{
 	}
 
 	.social.facebook:before{
+		left:-1px;
 		content:"\f09a";
 	}
 
@@ -569,7 +579,7 @@ p, li{
 			opacity:0;
 			pointer-events:none;
 			@include transitions($time-fast);
-		}
+		}s
 
 		h2{
 			color:rgba(255,255,255,0.2);
