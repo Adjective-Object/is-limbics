@@ -326,7 +326,9 @@ p, li {
 #abt p {
   padding-bottom: 0; }
 #abt .links {
-  margin-top: 18px; }
+  margin-top: 18px;
+  display: block;
+  float: left; }
 #abt .social {
   display: inline-block;
   text-indent: 0;
