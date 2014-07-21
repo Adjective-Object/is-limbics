@@ -599,6 +599,12 @@ p, li{
 		}
 	}
 
+	a:active{
+		outline:none;
+		-moz-outline-style: none;
+
+	}
+
 	padding-bottom:$barnav-height;	
 }
 

@@ -78,7 +78,7 @@ svg {
 .shifter:hover, .gem {
   -webkit-clip-path: polygon(37% 25%, 50% 15%, 63% 25%, 75% 75%, 50% 90%, 25% 75%);
   -ms-clip-path: polygon(37% 25%, 50% 15%, 63% 25%, 75% 75%, 50% 90%, 25% 75%);
-  clip-path: url(../svg/clip-gem-full.svg#svgClip);
+  clip-path: url(../svg/clip-gem.svg#svgClip);
   clip-path: polygon(37% 25%, 50% 15%, 63% 25%, 75% 75%, 50% 90%, 25% 75%); }
   .shifter:hover p, .gem p {
     top: 60%; }
@@ -505,6 +505,9 @@ p, li {
     opacity: 1; }
   #mus a:hover h2 {
     color: rgba(255, 255, 255, 0.85); }
+  #mus a:active {
+    outline: none;
+    -moz-outline-style: none; }
 
 @media screen and (max-width: 540px) {
   #titlehex {
