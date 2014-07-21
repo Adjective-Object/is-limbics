@@ -469,7 +469,9 @@ p, li {
     width: 160px;
     margin: 18px;
     vertical-align: top;
-    text-decoration: none; }
+    text-decoration: none;
+    outline: none;
+    -moz-outline-style: none; }
     #mus a img {
       position: relative;
       width: 100%;
@@ -505,9 +507,6 @@ p, li {
     opacity: 1; }
   #mus a:hover h2 {
     color: rgba(255, 255, 255, 0.85); }
-  #mus a:active {
-    outline: none;
-    -moz-outline-style: none; }
 
 @media screen and (max-width: 540px) {
   #titlehex {

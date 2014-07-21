@@ -562,6 +562,9 @@ p, li{
 		vertical-align:top;
 
 		text-decoration: none;
+		
+		outline:none;
+		-moz-outline-style: none;
 
 		img{
 			position:relative;
@@ -598,13 +601,6 @@ p, li{
 			color:rgba(255,255,255,0.85);
 		}
 	}
-
-	a:active{
-		outline:none;
-		-moz-outline-style: none;
-
-	}
-
 	padding-bottom:$barnav-height;	
 }
 
